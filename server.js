@@ -13,28 +13,16 @@ const vmClasses = require('./classes/vm.js');
 const VM =  vmClasses.vm_type;
 //variables
 const app = express();
-
 let httpPort = 443;
-let httpPath = '/rest/com/vmware/cis/session';
-let httpMethod = 'POST';
 let my_vcsa_host = '192.168.0.224';
 let my_sso_password = 'FX8150^blk';
 let my_sso_username = 'root';
 
+
 let vm_array = [];
 
 
-// Prepare the HTTP request.
-my_http_options = {
-    host: my_vcsa_host,
-    port: httpPort,
-    path: httpPath,
-    method: httpMethod,
-    rejectUnauthorized: false,
-    requestCert: true,
-    agent: false,
-    auth: my_sso_username + ":" + my_sso_password
-};
+
 
 
 //sets app to listen on port 3000
@@ -59,32 +47,24 @@ con.connect(function(err){
     if(err) throw err;
     console.log('connected');
 })
+createSession();
+populateVMArray();
+
 
 app.get('/', function (req,res) {
-    let sql = "SELECT * FROM vm_type";
-    con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log('vm list populated');
-        console.log(result.length);
-        for (i = 0; i < result.length; i++) {
-            let vmType = {
-                id: result[i].vm_type_id,
-                name: result[i].vm_name,
-                hdd: result[i].vm_hdd,
-                cpus: result[i].vm_cpus,
-                ram: result[i].vm_ram
-            };
-            console.log(vmType);
-            vm_array.push(vmType)
-
-        }
+        console.log(vm_array);
         res.render('home', {
             post: vm_array
         });
-    });
+
 })
 
 app.get('/GetVMinfo', function(req, res){
+    console.log('vminfo reached');
+    let data = getVMdata();
+    console.log(data)
+    res.render('admin',{vmdata: data});
+
 
 })
 
@@ -93,10 +73,32 @@ app.post('/', function(req, res){
 })
 
 
+// Prepare the HTTP request.
+
 
 //functions for the website to work
+function getVMdata(){
+    let json ='';
+    my_http_options = {
+        host: my_vcsa_host,
+        port: httpPort,
+        path: 'rest/vcenter/vm',
+        method: 'GET',
+        rejectUnauthorized: false,
+        requestCert: true,
+        agent: false,
+        auth: my_sso_username + ":" + my_sso_password
+    };
+    https.request(my_http_options,function(result,){
+        json = JSON.parse(result)
+        console.log(result);
+
+    })
+    return json;
+}
 // Define the callbacks.
 function callback(res) {
+
     console.log("STATUS: " + res.statusCode);
     res.on('error', function (err) {
         console.log("ERROR in SSO authentication: ", err)
@@ -116,15 +118,22 @@ function callback(res) {
 }
 
 // Issue the session creation request.
+function createSession(){
+    my_http_options = {
+        host: my_vcsa_host,
+        port: httpPort,
+        path: '/rest/com/vmware/cis/session',
+        method: 'POST',
+        rejectUnauthorized: false,
+        requestCert: true,
+        agent: false,
+        auth: my_sso_username + ":" + my_sso_password
+    };
     https.request(my_http_options, callback).end();
-
-
-
-//VM Functions
-function populateVMs(){
-
+}
+function populateVMArray(){
     let sql = "SELECT * FROM vm_type";
-    con.query(sql, function(err,result) {
+    con.query(sql, function (err, result) {
         if (err) throw err;
         console.log('vm list populated');
         console.log(result.length);
@@ -138,54 +147,9 @@ function populateVMs(){
             };
             console.log(vmType);
             vm_array.push(vmType)
-
         }
-        console.log(vm_array)
-        return vm_array
     })
-
 }
-
-//queryResponce.forEach(function (i) {
-   // let vmType = new VM(i.vm_type_id, i.vm_name, i.vm_hdd, i.vm_cpus, i.vm_ram)
- //   vm_array.push(vmType)
-//})
-//console.log('vm_array');
-//console.log(vm_array);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function addVirtualMachine($name, $hdd, $cpu,$ram){
