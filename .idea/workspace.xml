@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/comp3000_nodejs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/handlebars.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/handlebars.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/is-ci" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/is-ci.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/is-ci.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nodemon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nodemon.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nodemon.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nodetouch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nodetouch.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nodetouch.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nopt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nopt.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/nopt.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/rc.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/rc.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/semver.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/semver.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/.github/workflows/codeql-analysis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/.github/workflows/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/HISTORY.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/lib/express-handlebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/renovate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/express-handlebars.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/layouts/main-latin1.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/layouts/main.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/other-views/layouts/main.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/other-views/partials/partial.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/partials/partial-latin1.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/partials/partial.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/render-cached.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/render-helper.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/render-latin1.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/render-partial.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/render-text.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/templates/subdir/template.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/templates/template-latin1.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/express-handlebars/spec/fixtures/templates/template.handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/changelog.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/glob.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/glob/sync.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/README.markdown" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/bin/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/bin/handlebars" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars.runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/ast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/code-gen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/javascript-compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/printer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/compiler/whitespace-control.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/decorators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/decorators/inline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/exception.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/block-helper-missing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/each.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/helper-missing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/if.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/lookup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/helpers/with.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/internal/create-new-lookup-object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/internal/proto-access.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/internal/wrapHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/no-conflict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/safe-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/handlebars/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/amd/precompiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars.runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/ast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/code-gen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/javascript-compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/printer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/compiler/whitespace-control.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/decorators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/decorators/inline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/exception.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/block-helper-missing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/each.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/helper-missing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/if.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/lookup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/helpers/with.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/internal/create-new-lookup-object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/internal/proto-access.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/internal/wrapHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/no-conflict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/safe-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/handlebars/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/cjs/precompiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.amd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.amd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.amd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.amd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/dist/handlebars.runtime.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars.runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/ast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/code-gen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/javascript-compiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/parser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/printer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/visitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/compiler/whitespace-control.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/decorators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/decorators/inline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/exception.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/block-helper-missing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/each.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/helper-missing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/if.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/lookup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/helpers/with.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/internal/create-new-lookup-object.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/internal/proto-access.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/internal/wrapHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/no-conflict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/safe-string.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/handlebars/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/lib/precompiler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/print-script" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/release-notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/runtime.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/runtime.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/handlebars/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inflight/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inflight/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inflight/inflight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inflight/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/allLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/allSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/angelFall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/any.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/anyLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/anySeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/apply.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/applyEach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/applyEachSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/async.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/asyncify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/auto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/autoInject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/cargo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/compose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/concat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/concatLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/concatSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/constant.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/createLogger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/detect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/detectLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/detectSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/dir.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/doDuring.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/doUntil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/doWhilst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/during.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/each.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/eachLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/eachOf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/eachOfLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/eachOfSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/eachSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/ensureAsync.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/every.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/everyLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/everySeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/fast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/filter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/filterLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/filterSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/find.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/findLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/findSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/foldl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/foldr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forEach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forEachLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forEachOf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forEachOfLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forEachOfSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forEachSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/forever.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/groupBy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/groupByLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/groupBySeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/inject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/iterator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/mapLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/mapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/mapValues.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/mapValuesLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/mapValuesSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/memoize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/nextTick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/omit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/omitLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/omitSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/parallel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/parallelLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/pick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/pickLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/pickSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/priorityQueue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/queue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/race.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/reduce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/reduceRight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/reflect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/reflectAll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/reject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/rejectLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/rejectSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/retry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/retryable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/safe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/selectLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/selectSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/seq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/setImmediate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/some.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/someLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/someSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/sortBy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/sortByLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/sortBySeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/timeout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/times.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/timesLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/timesSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/transform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/transformLimit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/transformSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/tryEach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/unmemoize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/until.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/waterfall.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/whilst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/neo-async/wrapSync.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/path-is-absolute/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/path-is-absolute/license" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/path-is-absolute/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/path-is-absolute/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.debug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/dist/source-map.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/lib/source-map-generator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/lib/source-node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/source-map/lib/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/bin/uglifyjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/ast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/compress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/minify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/mozilla-ast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/output.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/parse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/propmangle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/scope.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/sourcemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/transform.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/lib/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/tools/domprops.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/tools/domprops.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/tools/exports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/tools/node.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/uglify-js/tools/tty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/README.markdown" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/example/center.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/example/meat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/test/break.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/test/idleness.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/wordwrap/test/wrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/admin.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pQSvmoYBlSE77OgPytJjwyD6Os" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.5.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.32" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\views" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="" />
+      <created>1615114053762</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615114053762</updated>
+      <workItem from="1615114054856" duration="8693000" />
+      <workItem from="1615132098435" duration="7986000" />
+      <workItem from="1615203221774" duration="5208000" />
+      <workItem from="1615216428282" duration="1036000" />
+      <workItem from="1615278452704" duration="1050000" />
+      <workItem from="1615299985787" duration="2286000" />
+      <workItem from="1615305145780" duration="2516000" />
+      <workItem from="1615814367147" duration="12321000" />
+      <workItem from="1615832862858" duration="1440000" />
+      <workItem from="1615985976444" duration="9048000" />
+      <workItem from="1616516664014" duration="1033000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616517386314">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517386314" />
+    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1615815796512">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1615815796512" />
+    <state x="1138" y="598" key="Github.ShareDialog" timestamp="1616517404074">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1138" y="598" key="Github.ShareDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517404074" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1616517696500">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517696500" />
+    <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1616517685618">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517685618" />
+  </component>
+</project>
