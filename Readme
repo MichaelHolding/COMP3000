@@ -1,0 +1,6 @@
+This is the repository for my Final Year Project
+database created on phpmyadmin and hosted on AMPPS 3.9 
+all sql can be found in sql.txt 
+
+apache server hosted on same ampps instalatation. Connection variables can be changed in the dbcontext class
+css method used is w3 schools css, stylesheets referenced on webpages 
