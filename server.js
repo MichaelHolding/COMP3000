@@ -29,6 +29,7 @@ let vm_array = [];
 app.listen(3000,() => console.log('Listening on port 3000'));
 
 app.use(express.static('public'));
+app.use('/images',express.static('images'));
 app.use(bodyparser.urlencoded({extended : true}));
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
@@ -51,22 +52,21 @@ createSession();
 populateVMArray();
 
 
-app.get('/', function (req,res) {
+app.get('', function (req,res) {
         console.log(vm_array);
         res.render('home', {
             post: vm_array
         });
 
 })
-
-app.get('/GetVMinfo', function(req, res){
+app.get('/admin',function (req,res){
     console.log('vminfo reached');
-    let data = getVMdata();
-    console.log(data)
-    res.render('admin',{vmdata: data});
-
-
+    //let data = getVMdata();
+    //console.log(data)
+    res.render('adminpage',{dbStuff:vm_array});
 })
+
+
 
 app.post('/', function(req, res){
 
@@ -79,7 +79,7 @@ app.post('/', function(req, res){
 //functions for the website to work
 function getVMdata(){
     let json ='';
-    my_http_options = {
+    let my_http_options = {
         host: my_vcsa_host,
         port: httpPort,
         path: 'rest/vcenter/vm',
@@ -89,11 +89,11 @@ function getVMdata(){
         agent: false,
         auth: my_sso_username + ":" + my_sso_password
     };
-    https.request(my_http_options,function(result,){
-        json = JSON.parse(result)
+    let url = 'https://192.168.0.224/rest/vcenter/vm'
+    https.get(url,function(result,){
         console.log(result);
-
-    })
+        json = result
+    }).end();
     return json;
 }
 // Define the callbacks.

@@ -1,0 +1,31 @@
+<div>
+    <h1>Admin Page</h1>
+    <h2>Active Machines</h2>
+    <div class="w3-container w3-margins">
+        <p>Placeholder for information about currently active VMs</p>
+    </div>
+    <h2>VM Spec Editor</h2>
+    <div class="w3-margins">
+    <table class="w3-table-all w3-hoverable">
+        <tr class="w3-blue">
+            <th>ID</th>
+            <th>Name</th>
+            <th>CPUs</th>
+            <th>HDD</th>
+            <th>RAM</th>
+        </tr>
+        {{#each dbStuff}}
+            <tr>
+                <td><input value="{{this.id}}"></td>
+                <td><input value="{{this.name}}"></td>
+                <td><input value="{{this.cpus}}"></td>
+                <td><input value="{{this.hdd}}"></td>
+                <td><input value="{{this.ram}}"></td>
+                <td><button class="w3-btn w3-blue">UPDATE</button></td>
+                <td><button class="w3-btn w3-red">DELETE</button></td>
+            </tr>
+        {{/each}}
+
+    </table>
+    </div>
+</div>

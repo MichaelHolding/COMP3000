@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="nodejs version of code">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="home.hbs added">
+      <change afterPath="$PROJECT_DIR$/images/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\images" />
       <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\views" />
     </key>
   </component>
@@ -67,7 +70,7 @@
       <workItem from="1615814367147" duration="12321000" />
       <workItem from="1615832862858" duration="1440000" />
       <workItem from="1615985976444" duration="9048000" />
-      <workItem from="1616516664014" duration="13155000" />
+      <workItem from="1616516664014" duration="19353000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -76,7 +79,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616517718522</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="styling changes, &#10;admin page functionality changed&#10;server js modified functions">
+      <created>1616533740216</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616533740216</updated>
+    </task>
+    <task id="LOCAL-00003" summary="home.hbs added">
+      <created>1616533971992</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616533971992</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,13 +101,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nodejs version of code" />
-    <option name="LAST_COMMIT_MESSAGE" value="nodejs version of code" />
+    <MESSAGE value="styling changes, &#10;admin page functionality changed&#10;server js modified functions" />
+    <MESSAGE value="home.hbs added" />
+    <option name="LAST_COMMIT_MESSAGE" value="home.hbs added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616517386314">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517386314" />
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616534240374">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616534240374" />
     <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1616518779860">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -99,10 +122,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1138" y="598" key="Github.ShareDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517404074" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1616517720429">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1616533975420">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517720429" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616533975420" />
+    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1616533929296">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616533929296" />
     <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1616517685618">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
