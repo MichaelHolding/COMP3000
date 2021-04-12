@@ -6,6 +6,7 @@ const bodyparser = require('body-parser');
 const mysql = require('mysql');
 const exphbs = require('express-handlebars');
 
+
 //classes
 
 const vmClasses = require('./classes/vm.js');
@@ -14,21 +15,30 @@ const VM =  vmClasses.vm_type;
 //variables
 const app = express();
 let httpPort = 443;
+let httpPath = '/rest/com/vmware/cis/session';
+let httpMethod = 'POST'
 let my_vcsa_host = '192.168.0.224';
-let my_sso_password = 'FX8150^blk';
-let my_sso_username = 'root';
-
+let my_sso_password = 'Admin^123';
+let my_sso_username = 'administrator@vsphere.local';
+my_http_options = {
+    host: my_vcsa_host,
+    port: httpPort,
+    path: httpPath,
+    method: httpMethod,
+    rejectUnauthorized: false,
+    requestCert: true,
+    agent: false,
+    auth: my_sso_username + ":" + my_sso_password
+};
 
 let vm_array = [];
-
-
-
 
 
 //sets app to listen on port 3000
 app.listen(3000,() => console.log('Listening on port 3000'));
 
 app.use(express.static('public'));
+app.use(bodyparser.json());
 app.use('/images',express.static('images'));
 app.use(bodyparser.urlencoded({extended : true}));
 app.engine('hbs', exphbs({
@@ -48,7 +58,9 @@ con.connect(function(err){
     if(err) throw err;
     console.log('connected');
 })
-createSession();
+//ISSUE COOKIE REQUEST
+https.request(my_http_options, callback).end();
+//POPULATE DATA FROM DB
 populateVMArray();
 
 
@@ -59,10 +71,20 @@ app.get('', function (req,res) {
         });
 
 })
-app.get('/admin',function (req,res){
-    console.log('vminfo reached');
-    //let data = getVMdata();
-    //console.log(data)
+app.get('/admin', function (req,res){
+    console.log('vminfo requested');
+
+    console.log(my_http_options);
+    my_http_options.path = '/rest/vcenter/vm';
+    my_http_options.method = 'GET';
+
+    console.log('New Options');
+    console.log(my_http_options);
+    var data = {};
+    https.request(my_http_options,callBack).end();
+    console.log(data);
+
+
     res.render('adminpage',{dbStuff:vm_array});
 })
 
@@ -73,63 +95,31 @@ app.post('/', function(req, res){
 })
 
 
-// Prepare the HTTP request.
+
 
 
 //functions for the website to work
-function getVMdata(){
-    let json ='';
-    let my_http_options = {
-        host: my_vcsa_host,
-        port: httpPort,
-        path: 'rest/vcenter/vm',
-        method: 'GET',
-        rejectUnauthorized: false,
-        requestCert: true,
-        agent: false,
-        auth: my_sso_username + ":" + my_sso_password
-    };
-    let url = 'https://192.168.0.224/rest/vcenter/vm'
-    https.get(url,function(result,){
-        console.log(result);
-        json = result
-    }).end();
-    return json;
-}
-// Define the callbacks.
-function callback(res) {
 
+
+function callBack(error, response, body) {
+    if (!error && response.statusCode == 200) {
+        console.log(response);
+    }
+}
+function callback(res) {
     console.log("STATUS: " + res.statusCode);
-    res.on('error', function (err) {
-        console.log("ERROR in SSO authentication: ", err)
-    });
-    res.on('data', function (chunk) {
-    });
-    res.on('end', function () {
+    res.on('error', function(err) { console.log("ERROR in SSO authentication: ", err) });
+    res.on('data', function(chunk) {});
+    res.on('end', function() {
         if (res.statusCode == 200) {
             // Save session ID authentication.
-            let cookieValue = res.headers['set-cookie'];
+            var cookieValue = res.headers['set-cookie'];
             my_http_options.headers = {'Cookie': cookieValue};
             // Remove username-password authentication.
             my_http_options.auth = {};
         }
         console.log("Session ID:\n" + res.headers['set-cookie']);
     })
-}
-
-// Issue the session creation request.
-function createSession(){
-    my_http_options = {
-        host: my_vcsa_host,
-        port: httpPort,
-        path: '/rest/com/vmware/cis/session',
-        method: 'POST',
-        rejectUnauthorized: false,
-        requestCert: true,
-        agent: false,
-        auth: my_sso_username + ":" + my_sso_password
-    };
-    https.request(my_http_options, callback).end();
 }
 function populateVMArray(){
     let sql = "SELECT * FROM vm_type";

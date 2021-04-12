@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="home.hbs added">
-      <change afterPath="$PROJECT_DIR$/images/Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="placeholders added on admin page with edit functionality provisioned for">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +35,10 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.5.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.32" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Net302" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -70,7 +67,24 @@
       <workItem from="1615814367147" duration="12321000" />
       <workItem from="1615832862858" duration="1440000" />
       <workItem from="1615985976444" duration="9048000" />
-      <workItem from="1616516664014" duration="19353000" />
+      <workItem from="1616516664014" duration="19426000" />
+      <workItem from="1616541506308" duration="381000" />
+      <workItem from="1616580439983" duration="2717000" />
+      <workItem from="1616758254538" duration="38000" />
+      <workItem from="1617360824423" duration="5047000" />
+      <workItem from="1617453288478" duration="3613000" />
+      <workItem from="1617469862186" duration="256000" />
+      <workItem from="1617525496028" duration="1552000" />
+      <workItem from="1617621509615" duration="379000" />
+      <workItem from="1617625815045" duration="6414000" />
+      <workItem from="1617980939322" duration="2348000" />
+      <workItem from="1618047419288" duration="225000" />
+      <workItem from="1618047975093" duration="408000" />
+      <workItem from="1618057183031" duration="600000" />
+      <workItem from="1618229286158" duration="2859000" />
+      <workItem from="1618233507708" duration="381000" />
+      <workItem from="1618236164456" duration="548000" />
+      <workItem from="1618240368674" duration="845000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -93,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616533971992</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="placeholders added on admin page with edit functionality provisioned for">
+      <created>1616541400494</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616541400494</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,7 +124,8 @@
     <MESSAGE value="nodejs version of code" />
     <MESSAGE value="styling changes, &#10;admin page functionality changed&#10;server js modified functions" />
     <MESSAGE value="home.hbs added" />
-    <option name="LAST_COMMIT_MESSAGE" value="home.hbs added" />
+    <MESSAGE value="placeholders added on admin page with edit functionality provisioned for" />
+    <option name="LAST_COMMIT_MESSAGE" value="placeholders added on admin page with edit functionality provisioned for" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616517386314">
