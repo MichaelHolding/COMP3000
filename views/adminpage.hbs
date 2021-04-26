@@ -2,7 +2,10 @@
     <h1>Admin Page</h1>
     <h2>Active Machines</h2>
     <div class="w3-container w3-margins">
-        <p>Placeholder for information about currently active VMs</p>
+        {{#each activeVMdata}}
+            <p>{{this.vm}}</p>
+            <br>
+        {{/each}}
     </div>
     <h2>VM Spec Editor</h2>
     <div class="w3-margins">

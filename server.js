@@ -78,6 +78,7 @@ app.get('', function (req,res) {
 })
 app.get('/admin', function (req,res) {
     console.log('vminfo requested');
+    var active_vms ='';
     options = {
         rejectUnauthorized: false,
         requestCert: true,
@@ -91,9 +92,12 @@ app.get('/admin', function (req,res) {
         if (err) throw err;
         let data = JSON.parse(body);
         console.log('status: '+ res.statusCode);
-        console.log(data);
+        active_vms = data.value;
+        console.log(active_vms);
+
+
     })
-    res.render('adminpage', {dbStuff: vm_array});
+    res.render('adminpage', {dbStuff: vm_array, activeVMdata:active_vms });
     })
 
 

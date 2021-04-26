@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="authentication with vsphere established">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/adminpage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +110,9 @@
       <workItem from="1619102393572" duration="435000" />
       <workItem from="1619102883467" duration="896000" />
       <workItem from="1619103807912" duration="2025000" />
-      <workItem from="1619166671585" duration="808000" />
+      <workItem from="1619166671585" duration="1706000" />
+      <workItem from="1619170167311" duration="1419000" />
+      <workItem from="1619181591395" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -147,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618241900578</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="major api progress, have successfully made call to get active virtual machine information. starting development on creating vm based on template.">
+      <created>1619167843363</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619167843363</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +180,8 @@
     <MESSAGE value="home.hbs added" />
     <MESSAGE value="placeholders added on admin page with edit functionality provisioned for" />
     <MESSAGE value="authentication with vsphere established" />
-    <option name="LAST_COMMIT_MESSAGE" value="authentication with vsphere established" />
+    <MESSAGE value="major api progress, have successfully made call to get active virtual machine information. starting development on creating vm based on template." />
+    <option name="LAST_COMMIT_MESSAGE" value="major api progress, have successfully made call to get active virtual machine information. starting development on creating vm based on template." />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616517386314">
@@ -190,14 +200,14 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1138" y="598" key="Github.ShareDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517404074" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1618241902170">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1619167846089">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1618241902170" />
-    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1616533929296">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619167846089" />
+    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1619167822707">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616533929296" />
+    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619167822707" />
     <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1616517685618">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
