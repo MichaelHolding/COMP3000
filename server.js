@@ -15,9 +15,11 @@ const vmClasses = require('./classes/vm.js');
 const VM =  vmClasses.vm_type;
 //variables
 var session_id = '';
+let vm_array = [];
 const app = express();
 let my_sso_password = 'Admin^123';
 let my_sso_username = 'administrator@vsphere.local';
+//API ID req options
 my_http_options = {
     rejectUnauthorized: false,
     requestCert: true,
@@ -26,11 +28,7 @@ my_http_options = {
         username: my_sso_username,
         password: my_sso_password
     }
-
-
 };
-
-let vm_array = [];
 
 
 //sets app to listen on port 3000
@@ -42,10 +40,16 @@ app.use('/images',express.static('images'));
 app.use(bodyparser.urlencoded({extended : true}));
 app.engine('hbs', exphbs({
     defaultLayout: 'main',
-    extname: '.hbs'
+    extname: '.hbs',
 }));
 app.set('view engine','hbs');
 
+request.post('https://192.168.0.224/rest/com/vmware/cis/session',my_http_options,function (err,res,body){
+    if(err) throw err;
+    let json = JSON.parse(body);
+    console.log(json);
+    session_id = json.value;
+})
 //setting up connection to database
 const con = mysql.createConnection({
     host: "Proj-mysql.uopnet.plymouth.ac.uk",
@@ -58,27 +62,23 @@ con.connect(function(err){
     console.log('connected');
 })
 
-//ISSUE COOKIE REQUEST
-request.post('https://192.168.0.224/rest/com/vmware/cis/session',my_http_options,function (err,res,body){
-    if(err) throw err;
-    let json = JSON.parse(body);
-    console.log(json);
-    session_id = json.value;
-})
-//POPULATE DATA FROM DB
+//POPULATE DATA
 populateVMArray();
 
+//APP Functions
 
 app.get('', function (req,res) {
-        console.log(vm_array);
-        res.render('home', {
-            post: vm_array
-        });
+
+
+    console.log(vm_array);
+    res.render('home');
 
 })
 app.get('/admin', function (req,res) {
+
+
     console.log('vminfo requested');
-    var active_vms ='';
+    //standard http options
     options = {
         rejectUnauthorized: false,
         requestCert: true,
@@ -86,55 +86,45 @@ app.get('/admin', function (req,res) {
         headers: {
             'vmware-api-session-id': session_id
         }
-
     }
-    request.get('https://192.168.0.224/rest/vcenter/vm',options,function (err, res, body){
+    var active_vms =[];
+    request.get('https://192.168.0.224/rest/vcenter/vm',options,function (err, response, body){
         if (err) throw err;
         let data = JSON.parse(body);
-        console.log('status: '+ res.statusCode);
-        active_vms = data.value;
-        console.log(active_vms);
-
-
+        console.log('status: '+ response.statusCode);
+        let json = data.value;
+        console.log(json.length)
+        for(i = 0;i< json.length; i++){
+            let activeMachine = {
+                memory: json[i].memory_size_MiB,
+                id: json[i].vm,
+                name: json[i].name,
+                power: json[i].power_state,
+                cpu: json[i].cpu_count
+            };
+            active_vms.push(activeMachine);
+        }
+        console.log(active_vms)
+        res.render('adminpage', {dbStuff: vm_array, active:active_vms});
     })
-    res.render('adminpage', {dbStuff: vm_array, activeVMdata:active_vms });
-    })
+
+})
 
 
-    app.post('/', function (req, res) {
 
-    })
+app.post('/', function (req, res) {
 
-
-//functions for the website to work
+})
 
 
-    // function callback(res) {
-    //     console.log("STATUS: " + res.statusCode);
-    //     res.on('error', function (err) {
-    //         console.log("ERROR in SSO authentication: ", err)
-    //     });
-    //     res.on('data', function (chunk) {
-    //     });
-    //     res.on('end', function () {
-    //         if (res.statusCode == 200) {
-    //             // Save session ID authentication.
-    //             var cookieValue = res.headers['set-cookie'];
-    //             session_id = cookieValue;
-    //             my_http_options.headers = {'Cookie': cookieValue};
-    //             // Remove username-password authentication.
-    //             my_http_options.auth = {};
-    //         }
-    //         console.log("Session ID:\n" + res.headers['set-cookie']);
-    //     })
-    // }
 
+
+//Database Functions
     function populateVMArray() {
         let sql = "SELECT * FROM vm_type";
         con.query(sql, function (err, result) {
             if (err) throw err;
             console.log('vm list populated');
-            console.log(result.length);
             for (i = 0; i < result.length; i++) {
                 let vmType = {
                     id: result[i].vm_type_id,

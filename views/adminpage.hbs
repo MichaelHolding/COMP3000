@@ -1,11 +1,26 @@
 <div>
     <h1>Admin Page</h1>
     <h2>Active Machines</h2>
-    <div class="w3-container w3-margins">
-        {{#each activeVMdata}}
-            <p>{{this.vm}}</p>
-            <br>
-        {{/each}}
+    <div class="w3-margins">
+        <table class="w3-table-all w3-hoverable">
+            <tr class="w3-blue">
+                <th>ID</th>
+                <th>Name</th>
+                <th>CPUs</th>
+                <th>Power State</th>
+                <th>Memory MB </th>
+            </tr>
+            {{#each active}}
+                <tr>
+                    <td>{{this.id}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.cpu}}</td>
+                    <td>{{this.power}}</td>
+                    <td>{{this.memory}}</td>
+                </tr>
+            {{/each}}
+
+        </table>
     </div>
     <h2>VM Spec Editor</h2>
     <div class="w3-margins">

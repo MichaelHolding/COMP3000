@@ -19,10 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="authentication with vsphere established">
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="active VM data received from server">
+      <change afterPath="$PROJECT_DIR$/views/client.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/adminpage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +66,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\images" />
       <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\views" />
+      <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -113,6 +116,9 @@
       <workItem from="1619166671585" duration="1706000" />
       <workItem from="1619170167311" duration="1419000" />
       <workItem from="1619181591395" duration="3000" />
+      <workItem from="1619420131713" duration="7532000" />
+      <workItem from="1619597755576" duration="185000" />
+      <workItem from="1619599953364" duration="3476000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -156,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619167843363</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="active VM data recived to server">
+      <created>1619420162453</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619420162453</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +194,8 @@
     <MESSAGE value="placeholders added on admin page with edit functionality provisioned for" />
     <MESSAGE value="authentication with vsphere established" />
     <MESSAGE value="major api progress, have successfully made call to get active virtual machine information. starting development on creating vm based on template." />
-    <option name="LAST_COMMIT_MESSAGE" value="major api progress, have successfully made call to get active virtual machine information. starting development on creating vm based on template." />
+    <MESSAGE value="active VM data recived to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="active VM data recived to server" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616517386314">
@@ -200,10 +214,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1138" y="598" key="Github.ShareDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517404074" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1619167846089">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1619420168274">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619167846089" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619420168274" />
     <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1619167822707">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
