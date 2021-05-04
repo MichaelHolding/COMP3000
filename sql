@@ -9,3 +9,6 @@ ALTER TABLE `actvie_machines` ADD CONSTRAINT `FK_username` FOREIGN KEY (`usernam
 
 CREATE TABLE `comp3000`.`vm_type` ( `vm_type_id` INT NOT NULL AUTO_INCREMENT , `vm_name` VARCHAR(25) NOT NULL , `vm_hdd` INT NOT NULL ,
  `vm_cpus` INT NOT NULL , `vm_ram` INT NOT NULL , PRIMARY KEY (`vm_type_id`)) ENGINE = InnoDB;
+
+CREATE TABLE `comp3000_mholding`.`vm_template` ( `template_name` VARCHAR(40) NULL , `vm_item` VARCHAR(50) NULL ) ENGINE = InnoDB;
+ALTER TABLE `vm_template` ADD PRIMARY KEY( `template_name`);
