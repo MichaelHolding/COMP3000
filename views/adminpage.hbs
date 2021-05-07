@@ -22,28 +22,56 @@
 
         </table>
     </div>
-    <h2>VM Spec Editor</h2>
+    <h2>Current VM Templates</h2>
     <div class="w3-margins">
     <table class="w3-table-all w3-hoverable">
         <tr class="w3-blue">
-            <th>ID</th>
             <th>Name</th>
-            <th>CPUs</th>
-            <th>HDD</th>
-            <th>RAM</th>
+            <th>vSphere Library Item</th>
+
         </tr>
-        {{#each dbStuff}}
+        {{#each template}}
             <tr>
-                <td><input value="{{this.id}}"></td>
                 <td><input value="{{this.name}}"></td>
-                <td><input value="{{this.cpus}}"></td>
-                <td><input value="{{this.hdd}}"></td>
-                <td><input value="{{this.ram}}"></td>
+                <td>{{this.library_item}}</td>
                 <td><button class="w3-btn w3-blue">UPDATE</button></td>
                 <td><button class="w3-btn w3-red">DELETE</button></td>
             </tr>
         {{/each}}
-
     </table>
+        <h2>Add New Template</h2>
+        <br>
+        <p>After creating template on vSphere please insert the details below</p>
+        <div id="addTable">
+            <table class="w3-table-all w3-hoverable">
+                <tr class="w3-blue">
+                    <th scope="col">
+                        Name
+                    </th>
+                    <th scope="col">
+                        vSphere Library Item
+                    </th>
+                </tr>
+
+                <tbody>
+                <form  action="/template" method="post">
+                    <tr>
+                        <td>
+                            <input class="form-control" type="text" name="Name">
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="ID" >
+                        </td>
+                        <td>
+                            <button type="submit" class="w3-btn w3-green">Add Template</button>
+                        </td>
+                    </tr>
+                </form>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
     </div>
 </div>

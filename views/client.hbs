@@ -1,11 +1,13 @@
 <div>
     <h2>Select a virtual machine from the drop down box</h2>
+    <form>
+        <select id="vmSelect">
+            {{#each post}}
+                <option value="{{this.id}}">{{this.name}}</option>
+            {{/each}}
+        </select> <button class="w3-btn w3-blue">Create VM</button>
+    </form>
 
-    <select id="vmSelect">
-        {{#each post}}
-            <option value="{{this.id}}">{{this.name}}</option>
-        {{/each}}
-    </select><br> <button class="w3-btn w3-blue">Create VM</button>
 
     <h2>Available machine specification</h2>
     <table class="w3-table-all w3-hoverable">
