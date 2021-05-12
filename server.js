@@ -61,7 +61,6 @@ getAuth();
 getTemplateInfo();
 
 //APP Functions
-
 app.get('', function (req,res) {
     res.render('home');
 })
@@ -108,16 +107,26 @@ app.post('/template', function (req, res) {
     addTemplate(tempName,lib);
     template_array = [];
     populateTemplates();
-
+    res.redirect('/admin');
+})
+app.post('/deploy',function (req,res){
+    console.log(req.body)
+    let name = req.body.Name;
+    let selectedItem = req.body.vmSelect;
+    deployFromTemplate(selectedItem,name)
 
 })
 //functions
 function getAuth(){
+
     request.post('https://192.168.0.224/rest/com/vmware/cis/session',my_http_options,function (err,res,body){
         if(err) throw err;
         let json = JSON.parse(body);
         console.log(json);
         session_id = json.value;
+        if(res.statusCode = 200){
+            console.log('Authentication Received')
+        }
     })
 }
 function getTemplateInfo(){
@@ -161,9 +170,38 @@ function RAMConversion(value){
     let final = Math.round(gb);
     return final;
 }
-function deployFromTemplate(){
+function deployFromTemplate(item,name) {
 
+    options = {
+        rejectUnauthorized: false,
+        requestCert: true,
+        agent: false,
+        json:true,
+        headers:{
+            'vmware-api-session-id': session_id
+        },
+        body:{
+            "spec": {
+                "name": name + "_VirtualMachine",
+                "placement": {
+                    "folder": "group-v3001",
+                    "host": "host-1013"
+                },
+                "disk_storage": {
+                    "datastore": "datastore-1014"
+                }
+            }
+        }
+
+    };
+    request.post('https://192.168.0.224/rest/vcenter/vm-template/library-items/' + item + '?action=deploy', options,
+        function (err, response, body) {
+        if(err) throw err;
+        console.log(response.statusCode)
+            console.log(body)
+        })
 }
+
 //Database Functions
 
     function populateTemplates(){

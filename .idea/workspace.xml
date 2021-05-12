@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="Solved issue with active VM data not displaying, started work on creating from template vms">
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="creation function started, front end improvements, template data partially working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/adminpage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +124,14 @@
       <workItem from="1620139512998" duration="1322000" />
       <workItem from="1620210002163" duration="10470000" />
       <workItem from="1620371720191" duration="3573000" />
+      <workItem from="1620376578152" duration="158000" />
+      <workItem from="1620400650973" duration="472000" />
+      <workItem from="1620471915349" duration="2215000" />
+      <workItem from="1620646969991" duration="3783000" />
+      <workItem from="1620748655188" duration="3836000" />
+      <workItem from="1620757692196" duration="2573000" />
+      <workItem from="1620809943521" duration="1169000" />
+      <workItem from="1620813828111" duration="1041000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -182,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619624243772</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="creation function started, front end improvements, template data partially working">
+      <created>1620376706100</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620376706100</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,40 +223,7 @@
     <MESSAGE value="major api progress, have successfully made call to get active virtual machine information. starting development on creating vm based on template." />
     <MESSAGE value="active VM data recived to server" />
     <MESSAGE value="Solved issue with active VM data not displaying, started work on creating from template vms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved issue with active VM data not displaying, started work on creating from template vms" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1616517386314">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517386314" />
-    <state x="960" y="436" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1619854006428">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="960" y="436" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619854006428" />
-    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616534240374">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616534240374" />
-    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1618993926142">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1618993926142" />
-    <state x="1138" y="598" key="Github.ShareDialog" timestamp="1616517404074">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1138" y="598" key="Github.ShareDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517404074" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1619624245704">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619624245704" />
-    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1619167822707">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1069" y="434" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1619167822707" />
-    <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1616517685618">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1400/-1920.189.1920.1040@0.0.2560.1400" timestamp="1616517685618" />
+    <MESSAGE value="creation function started, front end improvements, template data partially working" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation function started, front end improvements, template data partially working" />
   </component>
 </project>

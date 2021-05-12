@@ -1,13 +1,16 @@
 <div>
     <h2>Select a virtual machine from the drop down box</h2>
-    <form>
-        <select id="vmSelect">
+    <form action="/deploy" method="post">
+        <select name="vmSelect">
             {{#each post}}
-                <option value="{{this.id}}">{{this.name}}</option>
+                <option value="{{this.library_item}}">{{this.name}}</option>
             {{/each}}
-        </select> <button class="w3-btn w3-blue">Create VM</button>
+        </select>
+        <br>
+        <p>Please enter your surname</p>
+        <input class="form-control" type="text" name="Name">
+        <button class="w3-btn w3-blue">Create VM</button>
     </form>
-
 
     <h2>Available machine specification</h2>
     <table class="w3-table-all w3-hoverable">
@@ -22,7 +25,8 @@
                 <td>{{this.name}}</td>
                 <td>{{this.cpus}}</td>
                 <td>{{this.hdd}} GB</td>
-                <td>{{this.ram}} GB</td>
+                <td>{{this.ram}} GB</td
+                >
             </tr>
         {{/each}}
     </table>
