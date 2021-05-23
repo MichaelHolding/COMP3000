@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="creation function started, front end improvements, template data partially working">
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="deploy functionality complete, needs some polish">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/adminpage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +132,10 @@
       <workItem from="1620748655188" duration="3836000" />
       <workItem from="1620757692196" duration="2573000" />
       <workItem from="1620809943521" duration="1169000" />
-      <workItem from="1620813828111" duration="1041000" />
+      <workItem from="1620813828111" duration="1820000" />
+      <workItem from="1620914023499" duration="5280000" />
+      <workItem from="1620992470093" duration="1928000" />
+      <workItem from="1621768951720" duration="9366000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -196,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620376706100</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="deploy functionality complete, needs some polish">
+      <created>1620815516543</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620815516543</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +235,7 @@
     <MESSAGE value="active VM data recived to server" />
     <MESSAGE value="Solved issue with active VM data not displaying, started work on creating from template vms" />
     <MESSAGE value="creation function started, front end improvements, template data partially working" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation function started, front end improvements, template data partially working" />
+    <MESSAGE value="deploy functionality complete, needs some polish" />
+    <option name="LAST_COMMIT_MESSAGE" value="deploy functionality complete, needs some polish" />
   </component>
 </project>

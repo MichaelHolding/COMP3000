@@ -55,10 +55,9 @@ con.connect(function(err){
 })
 
 //POPULATE DATA
-
-populateTemplates();
 getAuth();
-getTemplateInfo();
+populateTemplates()
+
 
 //APP Functions
 app.get('', function (req,res) {
@@ -78,7 +77,6 @@ app.get('/admin', function (req,res) {
             'vmware-api-session-id': session_id
         }
     }
-
     request.get('https://192.168.0.224/rest/vcenter/vm',options,function (err, response, body){
         if (err) throw err;
         let data = JSON.parse(body);
@@ -96,7 +94,7 @@ app.get('/admin', function (req,res) {
             active_vms.push(activeMachine);
         }
         console.log(active_vms);
-        console.log(templateDetails);
+
         res.render('adminpage', { active:active_vms,template:template_array});
     })
 
@@ -113,10 +111,19 @@ app.post('/deploy',function (req,res){
     console.log(req.body)
     let name = req.body.Name;
     let selectedItem = req.body.vmSelect;
-    deployFromTemplate(selectedItem,name)
+    let edit = '';
+    if(req.body.edit == 'on'){
+        edit = 'true';
+    }else{
+        edit = 'false';
+    }
+    let editCPU = req.body.editCPU;
+    let editHDD = GBtoByte(req.body.editHDD);
+    let editRam = ramGBtoMB(req.body.editRAM);
+    deployFromTemplate(selectedItem,name,edit,editCPU,editHDD,editRam)
 
 })
-//functions
+
 function getAuth(){
 
     request.post('https://192.168.0.224/rest/com/vmware/cis/session',my_http_options,function (err,res,body){
@@ -124,40 +131,8 @@ function getAuth(){
         let json = JSON.parse(body);
         console.log(json);
         session_id = json.value;
-        if(res.statusCode = 200){
-            console.log('Authentication Received')
-        }
+        return res.statusCode;
     })
-}
-function getTemplateInfo(){
-    options = {
-        rejectUnauthorized: false,
-        requestCert: true,
-        agent: false,
-        headers: {
-            'vmware-api-session-id': session_id
-        }
-    }
-    for(i=0;i<template_array.length;i++){
-        let vmID = template_array[i].library_item;
-        let vmName = template_array[i].name;
-        request.get('https://192.168.0.224/rest/vcenter/vm-template/library-items/'+vmID,options,function (err,response,body){
-            if(err) throw err;
-            let result = JSON.parse(body);
-            let diskCapacity = result.value.disks[0].value.capacity;
-            let ram = RAMConversion(result.value.memory.size_MiB);
-            let data = {
-                name: vmName,
-                memory: ram,
-                cpu: result.value.cpu.count,
-                OS: result.value.guest_OS,
-                disk:byteToGB(diskCapacity)
-            }
-            console.log(data)
-            templateDetails.push(data);
-        })
-
-    }
 }
 function byteToGB(value){
     let it1 = value/1024;
@@ -165,13 +140,62 @@ function byteToGB(value){
     let final = it2/1024;
     return final;
 }
+function GBtoByte(value) {
+    let it1 = value * 1024;
+    let it2 = it1 * 1024;
+    let final = it2 * 1024;
+    return final;
+}
+function ramGBtoMB(value){
+    let final = value*1024
+    return final
+}
 function RAMConversion(value){
     let gb = value/1000;
     let final = Math.round(gb);
     return final;
 }
-function deployFromTemplate(item,name) {
+function deployFromTemplate(item,name,edit,editcpu,edithdd,editram) {
+if(edit == 'true'){
+    options = {
+        rejectUnauthorized: false,
+        requestCert: true,
+        agent: false,
+        json:true,
+        headers:{
+            'vmware-api-session-id': session_id
+        },
+        body:{
+            "spec": {
+                "name": name + "_VirtualMachine",
+                "placement": {
+                    "folder": "group-v3001",
+                    "host": "host-1013"
+                },
+                "disk_storage": {
+                    "datastore": "datastore-1014"
+                },
+                "hardware_customization":{
+                    "cpu_update": {
+                        "num_cpus": editcpu
+                    },
 
+                    "memory_update": {
+                        "memory": editram
+                    },
+                },
+                "powered_on":true
+            }
+        }
+
+    };
+    request.post('https://192.168.0.224/rest/vcenter/vm-template/library-items/' + item + '?action=deploy', options,
+        function (err, response, body) {
+            if(err) throw err;
+            console.log(response.statusCode)
+            console.log(body.value.messages);
+        })
+}else{
     options = {
         rejectUnauthorized: false,
         requestCert: true,
@@ -196,11 +220,13 @@ function deployFromTemplate(item,name) {
     };
     request.post('https://192.168.0.224/rest/vcenter/vm-template/library-items/' + item + '?action=deploy', options,
         function (err, response, body) {
-        if(err) throw err;
-        console.log(response.statusCode)
+            if(err) throw err;
+            console.log(response.statusCode)
             console.log(body)
         })
+    }
 }
+
 
 //Database Functions
 
@@ -212,16 +238,20 @@ function deployFromTemplate(item,name) {
             for(i=0; i <result.length; i++){
                 let data = {
                     name: result[i].template_name,
-                    library_item: result[i].vm_item
+                    library_item: result[i].vm_item,
+                    cpu:result[i].cpu,
+                    storage:result[i].storage,
+                    RAM:result[i].ram,
+                    OS:result[i].os
                 };
-                console.log(data);
-                template_array.push(data)
+                template_array.push(data);
             }
+            console.log(template_array);
         })
     }
-    function addTemplate($name, $id){
-        let sql = "Call AddTemplate(?,?)";
-        con.query(sql, [$name, $id], function (err) {
+    function addTemplate($name, $id, $cpu,$hdd,$ram,$os){
+        let sql = "Call AddTemplate(?,?,?,?,?,?)";
+        con.query(sql, [$name, $id,$cpu,$hdd,$ram,$os], function (err) {
             if (err) throw err;
             console.log('Template Added');
         })

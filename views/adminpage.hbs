@@ -28,12 +28,20 @@
         <tr class="w3-blue">
             <th>Name</th>
             <th>vSphere Library Item</th>
+            <th>CPU Count</th>
+            <th>Storage</th>
+            <th>RAM</th>
+            <th>Operating System</th>
 
         </tr>
         {{#each template}}
             <tr>
                 <td><input value="{{this.name}}"></td>
                 <td>{{this.library_item}}</td>
+                <td>{{this.cpu}}</td>
+                <td>{{this.storage}}GB</td>
+                <td>{{this.RAM}}GB</td>
+                <td>{{this.OS}}</td>
                 <td><button class="w3-btn w3-blue">UPDATE</button></td>
                 <td><button class="w3-btn w3-red">DELETE</button></td>
             </tr>
@@ -51,6 +59,18 @@
                     <th scope="col">
                         vSphere Library Item
                     </th>
+                    <th scope="col">
+                        CPU
+                    </th>
+                    <th scope="col">
+                        HDD (GB)
+                    </th>
+                    <th scope="col">
+                        RAM (GB)
+                    </th>
+                    <th scope="col">
+                        Operating System
+                    </th>
                 </tr>
 
                 <tbody>
@@ -61,6 +81,18 @@
                         </td>
                         <td>
                             <input class="form-control" type="text" name="ID" >
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="CPU" >
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="HDD" >
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="RAM" >
+                        </td>
+                        <td>
+                            <input class="form-control" type="text" name="OS" >
                         </td>
                         <td>
                             <button type="submit" class="w3-btn w3-green">Add Template</button>

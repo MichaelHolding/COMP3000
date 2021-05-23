@@ -1,4 +1,23 @@
 <div>
+    <h2>Available machine specification</h2>
+    <table class="w3-table-all w3-hoverable">
+        <tr class="w3-blue">
+            <th>Name</th>
+            <th>CPUs</th>
+            <th>HDD</th>
+            <th>RAM</th>
+            <th>Operating System</th>
+        </tr>
+        {{#each post}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.cpu}}</td>
+                <td>{{this.storage}} GB</td>
+                <td>{{this.RAM}} GB</td>
+                <td>{{this.OS}}</td>
+            </tr>
+        {{/each}}
+    </table>
     <h2>Select a virtual machine from the drop down box</h2>
     <form action="/deploy" method="post">
         <select name="vmSelect">
@@ -10,24 +29,12 @@
         <p>Please enter your surname</p>
         <input class="form-control" type="text" name="Name">
         <button class="w3-btn w3-blue">Create VM</button>
+        <h3>Edit Machine Specification</h3>
+        <p>Check box to edit the machine specification</p>
+        <input class="form-control" type="checkbox" name="edit">
+        <input class="form-control" type="text" name="editCPU">
+        <input class="form-control" type="text" name="editHDD">
+        <input class="form-control" type="text" name="editRAM">
     </form>
 
-    <h2>Available machine specification</h2>
-    <table class="w3-table-all w3-hoverable">
-        <tr class="w3-blue">
-            <th>Name</th>
-            <th>CPUs</th>
-            <th>HDD</th>
-            <th>RAM</th>
-        </tr>
-        {{#each post}}
-            <tr>
-                <td>{{this.name}}</td>
-                <td>{{this.cpus}}</td>
-                <td>{{this.hdd}} GB</td>
-                <td>{{this.ram}} GB</td
-                >
-            </tr>
-        {{/each}}
-    </table>
 </div>
