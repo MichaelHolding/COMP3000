@@ -63,8 +63,17 @@ populateTemplates()
 app.get('', function (req,res) {
     res.render('home');
 })
+app.get('/problem', function (req,res){
+    res.render('problem')
+})
+app.get('/complete',function(req,res){
+    res.render('complete')
+})
 app.get('/client',function (req,res){
     res.render('client',{post:template_array});
+})
+app.get('/loading',function (req,res){
+    res.render('loading');
 })
 app.get('/admin', function (req,res) {
     active_vms = [];
@@ -107,8 +116,10 @@ app.post('/template', function (req, res) {
     populateTemplates();
     res.redirect('/admin');
 })
-app.post('/deploy',function (req,res){
+app.post('/deploy',async function (req,res){
     console.log(req.body)
+
+    //creating variables
     let name = req.body.Name;
     let selectedItem = req.body.vmSelect;
     let edit = '';
@@ -118,12 +129,107 @@ app.post('/deploy',function (req,res){
         edit = 'false';
     }
     let editCPU = req.body.editCPU;
-    let editHDD = GBtoByte(req.body.editHDD);
     let editRam = ramGBtoMB(req.body.editRAM);
-    deployFromTemplate(selectedItem,name,edit,editCPU,editHDD,editRam)
+    if(edit == true){
+        options = {
+            rejectUnauthorized: false,
+            requestCert: true,
+            agent: false,
+            json:true,
+            headers:{
+                'vmware-api-session-id': session_id
+            },
+            body:{
+                "spec": {
+                    "name": name + "_VirtualMachine",
+                    "placement": {
+                        "folder": "group-v3001",
+                        "host": "host-1013"
+                    },
+                    "disk_storage": {
+                        "datastore": "datastore-1014"
+                    },
+                    "hardware_customization":{
+                        "cpu_update": {
+                            "num_cpus": editCPU
+                        },
+                        "memory_update": {
+                            "memory": editRam
+                        },
+                    },
+                    "powered_on":true
+                }
+            }
 
+        };
+    }else{
+        options = {
+            rejectUnauthorized: false,
+            requestCert: true,
+            agent: false,
+            json:true,
+            headers:{
+                'vmware-api-session-id': session_id
+            },
+            body:{
+                "spec": {
+                    "name": name + "_VirtualMachine",
+                    "placement": {
+                        "folder": "group-v3001",
+                        "host": "host-1013"
+                    },
+                    "disk_storage": {
+                        "datastore": "datastore-1014"
+                    },
+                    "powered_on":true
+                }
+            }
+
+        };
+    }
+    await request.post('https://192.168.0.224/rest/vcenter/vm-template/library-items/' + selectedItem + '?action=deploy', options,
+        function (err, response, body) {
+            if(err) throw err;
+            console.log(response.statusCode)
+            console.log(body.value)
+            if (response.statusCode ==200){
+                let vmID = body.value;
+                res.render('complete',{deployed:vmID})
+            }if (response.statusCode == 401){
+                res.render('problem',{message: 'There has been a problem connecting to vSphere. Please try again' +
+                        'if the issue persists please contact your administrator'})
+            }else{
+                res.render('problem',{message: 'There has been a critical problem connecting to vSphere.' +
+                        ' Please contact your administrator'})
+            }
+
+        })
 })
-
+app.post('/getIP',function (req,res){
+    let id = req.body.vmID;
+    options = {
+        rejectUnauthorized: false,
+        requestCert: true,
+        agent: false,
+        json: true,
+        headers: {
+            'vmware-api-session-id': session_id
+        }
+    }
+    request.get('https://192.168.0.224/rest/vcenter/vm/'+id+'/guest/identity',options,function (err,response,body) {
+        console.log(response.statusCode);
+        if (response.statusCode ==200){
+            let ip_address = body.ip_address;
+            console.log(ip_address)
+        }if (response.statusCode == 401){
+            res.render('problem',{message: 'There has been a problem connecting to vSphere. Please try again' +
+                    'if the issue persists please contact your administrator'})
+        }else{
+            res.render('problem',{message: 'There has been a critical problem connecting to vSphere.' +
+                    ' Please contact your administrator'})
+        }
+    })
+})
 function getAuth(){
 
     request.post('https://192.168.0.224/rest/com/vmware/cis/session',my_http_options,function (err,res,body){
@@ -155,77 +261,7 @@ function RAMConversion(value){
     let final = Math.round(gb);
     return final;
 }
-function deployFromTemplate(item,name,edit,editcpu,edithdd,editram) {
-if(edit == 'true'){
-    options = {
-        rejectUnauthorized: false,
-        requestCert: true,
-        agent: false,
-        json:true,
-        headers:{
-            'vmware-api-session-id': session_id
-        },
-        body:{
-            "spec": {
-                "name": name + "_VirtualMachine",
-                "placement": {
-                    "folder": "group-v3001",
-                    "host": "host-1013"
-                },
-                "disk_storage": {
-                    "datastore": "datastore-1014"
-                },
-                "hardware_customization":{
-                    "cpu_update": {
-                        "num_cpus": editcpu
-                    },
 
-                    "memory_update": {
-                        "memory": editram
-                    },
-                },
-                "powered_on":true
-            }
-        }
-
-    };
-    request.post('https://192.168.0.224/rest/vcenter/vm-template/library-items/' + item + '?action=deploy', options,
-        function (err, response, body) {
-            if(err) throw err;
-            console.log(response.statusCode)
-            console.log(body.value.messages);
-        })
-}else{
-    options = {
-        rejectUnauthorized: false,
-        requestCert: true,
-        agent: false,
-        json:true,
-        headers:{
-            'vmware-api-session-id': session_id
-        },
-        body:{
-            "spec": {
-                "name": name + "_VirtualMachine",
-                "placement": {
-                    "folder": "group-v3001",
-                    "host": "host-1013"
-                },
-                "disk_storage": {
-                    "datastore": "datastore-1014"
-                }
-            }
-        }
-
-    };
-    request.post('https://192.168.0.224/rest/vcenter/vm-template/library-items/' + item + '?action=deploy', options,
-        function (err, response, body) {
-            if(err) throw err;
-            console.log(response.statusCode)
-            console.log(body)
-        })
-    }
-}
 
 
 //Database Functions

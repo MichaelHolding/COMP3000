@@ -19,11 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="deploy functionality complete, needs some polish">
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="updated deploy editing, prep for final steps. still needs polishing">
+      <change afterPath="$PROJECT_DIR$/views/complete.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/loading.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/problem.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/adminpage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +46,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1pQSvmoYBlSE77OgPytJjwyD6Os" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,12 +68,15 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.5.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="15.0.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\views" />
       <recent name="C:\Users\TNTki\PhpstormProjects\comp3000_nodejs\images" />
@@ -135,7 +149,12 @@
       <workItem from="1620813828111" duration="1820000" />
       <workItem from="1620914023499" duration="5280000" />
       <workItem from="1620992470093" duration="1928000" />
-      <workItem from="1621768951720" duration="9366000" />
+      <workItem from="1621768951720" duration="9611000" />
+      <workItem from="1621796899574" duration="8912000" />
+      <workItem from="1621842721331" duration="8768000" />
+      <workItem from="1622022245689" duration="5845000" />
+      <workItem from="1622036549055" duration="1106000" />
+      <workItem from="1622044438859" duration="272000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -207,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620815516543</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated deploy editing, prep for final steps. still needs polishing">
+      <created>1621786711870</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1621786711870</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +262,7 @@
     <MESSAGE value="Solved issue with active VM data not displaying, started work on creating from template vms" />
     <MESSAGE value="creation function started, front end improvements, template data partially working" />
     <MESSAGE value="deploy functionality complete, needs some polish" />
-    <option name="LAST_COMMIT_MESSAGE" value="deploy functionality complete, needs some polish" />
+    <MESSAGE value="updated deploy editing, prep for final steps. still needs polishing" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated deploy editing, prep for final steps. still needs polishing" />
   </component>
 </project>

@@ -1,4 +1,30 @@
 <div>
+    <script>
+        function showDiv(){
+            document.getElementById("loading").style.display = "block";
+        }
+    </script>
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <div id="loading" style="display:none;" class="w3-panel w3-blue-grey" >
+        <div class="modal-content">
+            <p>Your Virtual machine is being deployed. Please wait this may take a few minutes</p>
+            <div class="loader"></div>
+        </div>
+    </div>
     <h2>Available machine specification</h2>
     <table class="w3-table-all w3-hoverable">
         <tr class="w3-blue">
@@ -28,13 +54,15 @@
         <br>
         <p>Please enter your surname</p>
         <input class="form-control" type="text" name="Name">
-        <button class="w3-btn w3-blue">Create VM</button>
+        <button class="w3-btn w3-blue" id="deployBtn" onclick="showDiv()">Create VM</button>
         <h3>Edit Machine Specification</h3>
         <p>Check box to edit the machine specification</p>
         <input class="form-control" type="checkbox" name="edit">
         <input class="form-control" type="text" name="editCPU">
         <input class="form-control" type="text" name="editHDD">
         <input class="form-control" type="text" name="editRAM">
+
     </form>
+
 
 </div>
