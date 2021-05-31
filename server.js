@@ -75,7 +75,9 @@ getAuth();
 populateTemplates()
 
 
-//APP Functions
+////////////////APP Functions///////////////////
+
+///////////////GET Functions////////////////////
 app.get('', function (req,res) {
     res.render('home');
 })
@@ -124,6 +126,9 @@ app.get('/admin', function (req,res) {
     })
 
 })
+
+///////////////POST Functions////////////////////
+
 app.post('/template', function (req, res) {
     let tempName = req.body.Name;
     let lib = req.body.ID;
@@ -279,6 +284,8 @@ app.post('/modifyTemplate',function(req,res){
         res.render('back')
     }
 })
+
+
 //functions
 function getAuth(){
 
