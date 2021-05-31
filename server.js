@@ -156,7 +156,7 @@ app.post('/deploy',async function (req,res){
     }
     let editCPU = req.body.editCPU;
     let editRam = ramGBtoMB(req.body.editRAM);
-    if(edit == true){
+    if(edit == 'true'){
         options = {
             rejectUnauthorized: false,
             requestCert: true,
@@ -188,7 +188,7 @@ app.post('/deploy',async function (req,res){
             }
 
         };
-    }else{
+    }else if(edit == 'false'){
         options = {
             rejectUnauthorized: false,
             requestCert: true,
@@ -280,8 +280,8 @@ app.post('/modifyTemplate',function(req,res){
 
 
     }else if (req.body.btnDelete === 'true'){
-        removeTemplate(req.body.id)
-        res.render('back')
+        removeTemplate(req.body.id);
+        res.redirect('back');
     }
 })
 
