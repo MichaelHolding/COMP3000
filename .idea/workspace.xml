@@ -19,13 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="updated deploy editing, prep for final steps. still needs polishing">
-      <change afterPath="$PROJECT_DIR$/views/complete.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/loading.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/problem.hbs" afterDir="false" />
+    <list default="true" id="183c1798-2177-49b9-9c0c-5df00ce7ac28" name="Default Changelist" comment="loading screens added, error page added">
+      <change afterPath="$PROJECT_DIR$/views/details.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/adminpage.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/adminpage.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/complete.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/complete.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -155,6 +156,16 @@
       <workItem from="1622022245689" duration="5845000" />
       <workItem from="1622036549055" duration="1106000" />
       <workItem from="1622044438859" duration="272000" />
+      <workItem from="1622048090321" duration="1351000" />
+      <workItem from="1622122725538" duration="860000" />
+      <workItem from="1622129679505" duration="659000" />
+      <workItem from="1622215641124" duration="4120000" />
+      <workItem from="1622222965085" duration="4315000" />
+      <workItem from="1622227317661" duration="1163000" />
+      <workItem from="1622277171634" duration="7368000" />
+      <workItem from="1622295662363" duration="1461000" />
+      <workItem from="1622388006673" duration="1419000" />
+      <workItem from="1622450884566" duration="12677000" />
     </task>
     <task id="LOCAL-00001" summary="nodejs version of code">
       <created>1616517718522</created>
@@ -233,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621786711870</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="loading screens added, error page added">
+      <created>1622048135057</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622048135058</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +281,7 @@
     <MESSAGE value="creation function started, front end improvements, template data partially working" />
     <MESSAGE value="deploy functionality complete, needs some polish" />
     <MESSAGE value="updated deploy editing, prep for final steps. still needs polishing" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated deploy editing, prep for final steps. still needs polishing" />
+    <MESSAGE value="loading screens added, error page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="loading screens added, error page added" />
   </component>
 </project>

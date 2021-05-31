@@ -1,7 +1,14 @@
 <div>
     <script>
-        function showDiv(){
+        function showLoading(){
             document.getElementById("loading").style.display = "block";
+        }
+        function showHideEditSpec(){
+            if(document.getElementById("edit").checked){
+                document.getElementById("editSpec").style.display = "block";
+            }else{
+                document.getElementById("editSpec").style.display = "none";
+            }
         }
     </script>
     <style>
@@ -21,7 +28,7 @@
     </style>
     <div id="loading" style="display:none;" class="w3-panel w3-blue-grey" >
         <div class="modal-content">
-            <p>Your Virtual machine is being deployed. Please wait this may take a few minutes</p>
+            <h1>Your Virtual machine is being deployed and Booted up. Please wait this may take a few minutes</h1>
             <div class="loader"></div>
         </div>
     </div>
@@ -52,15 +59,29 @@
             {{/each}}
         </select>
         <br>
-        <p>Please enter your surname</p>
-        <input class="form-control" type="text" name="Name">
-        <button class="w3-btn w3-blue" id="deployBtn" onclick="showDiv()">Create VM</button>
+        <p>Please enter the first 5 letters of your surname.</p>
+        <input class="form-control" type="text" name="Name" maxlength="5">
+        <br>
+        <br>
+        <button class="w3-btn w3-blue" id="deployBtn" onclick="showLoading()">Create VM</button>
         <h3>Edit Machine Specification</h3>
         <p>Check box to edit the machine specification</p>
-        <input class="form-control" type="checkbox" name="edit">
-        <input class="form-control" type="text" name="editCPU">
-        <input class="form-control" type="text" name="editHDD">
-        <input class="form-control" type="text" name="editRAM">
+        <input class="form-control" type="checkbox" name="edit" id="edit" onchange="showHideEditSpec()" >
+        <div id="editSpec" style="display:none;">
+            <p>Edit the number of cpu cores the machine has</p>
+            <select name="editCPU">
+                {{#each cpu}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+            <p>Edit the RAM the virtual machine has</p>
+            <select name="editRAM">
+                {{#each ram}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select>
+        </div>
+
 
     </form>
 

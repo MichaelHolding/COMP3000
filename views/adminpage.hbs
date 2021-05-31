@@ -1,31 +1,39 @@
 <div>
     <h1>Admin Page</h1>
     <h2>Active Machines</h2>
-    <div class="w3-margins">
-        <table class="w3-table-all w3-hoverable">
-            <tr class="w3-blue">
-                <th>ID</th>
-                <th>Name</th>
-                <th>CPUs</th>
-                <th>Power State</th>
-                <th>Memory MB </th>
-            </tr>
-            {{#each active}}
-                <tr>
-                    <td>{{this.id}}</td>
-                    <td>{{this.name}}</td>
-                    <td>{{this.cpu}}</td>
-                    <td>{{this.power}}</td>
-                    <td>{{this.memory}}</td>
+    <div>
+            <table class="w3-table-all w3-hoverable">
+                <tr class="w3-blue">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>CPUs</th>
+                    <th>Power State</th>
+                    <th>Memory </th>
                 </tr>
-            {{/each}}
+                {{#each active}}
+                    <tr>
+                        <form action="/modifyVM" method="post">
+                        <td><input readonly value="{{this.id}}" name="id"></td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.cpu}}</td>
+                        <td>{{this.power}}</td>
+                        <td>{{this.memory}}GB</td>
+                        <td><button name="powerOff" value="true" class="w3-btn w3-orange">Power Off
+                            <i class="fa fa-power-off" ></i></button></td>
+                            <td><button name="deleteVM" value="true" class="w3-btn w3-red">Delete VM</button></td>
+                        </form>
+                    </tr>
+                {{/each}}
+            </table>
 
-        </table>
+
     </div>
     <h2>Current VM Templates</h2>
-    <div class="w3-margins">
+    <div>
+    <p>Use the table to edit or delete the descriptions of the templates that are saved on the database</p>
     <table class="w3-table-all w3-hoverable">
         <tr class="w3-blue">
+            <th>ID</th>
             <th>Name</th>
             <th>vSphere Library Item</th>
             <th>CPU Count</th>
@@ -34,18 +42,24 @@
             <th>Operating System</th>
 
         </tr>
-        {{#each template}}
-            <tr>
-                <td><input value="{{this.name}}"></td>
-                <td>{{this.library_item}}</td>
-                <td>{{this.cpu}}</td>
-                <td>{{this.storage}}GB</td>
-                <td>{{this.RAM}}GB</td>
-                <td>{{this.OS}}</td>
-                <td><button class="w3-btn w3-blue">UPDATE</button></td>
-                <td><button class="w3-btn w3-red">DELETE</button></td>
-            </tr>
-        {{/each}}
+
+            {{#each template}}
+            <form action="/modifyTemplate" method="post">
+                <tr>
+                    <td><input name="id" value="{{this.id}}" readonly></td>
+                    <td><input name="templateName" value="{{this.name}}"></td>
+                    <td><input name="lib" value="{{this.library_item}}" readonly></td>
+                    <td><input name="cpu" value="{{this.cpu}}" maxlength="1" size="1"> </td>
+                    <td><input name="storage" value="{{this.storage}}" maxlength="3" size="3">GB</td>
+                    <td><input name="ram" value="{{this.RAM}}" maxlength="2" size="2">GB </td>
+                    <td><input name="os" value="{{this.OS}}"></td>
+                    <td><button name="btnUpdate" value="true"  class="w3-btn w3-blue" href="/admin" >UPDATE</button></td>
+                    <td><button name="btnDelete" value="true" class="w3-btn w3-red" href="/admin">DELETE</button></td>
+                </tr>
+            </form>
+            {{/each}}
+
+
     </table>
         <h2>Add New Template</h2>
         <br>
@@ -95,13 +109,12 @@
                             <input class="form-control" type="text" name="OS" >
                         </td>
                         <td>
-                            <button type="submit" class="w3-btn w3-green">Add Template</button>
+                            <button type="submit" class="w3-btn w3-green" href="/admin">Add Template</button>
                         </td>
                     </tr>
                 </form>
                 </tbody>
             </table>
-
         </div>
 
     </div>
