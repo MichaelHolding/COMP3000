@@ -1,6 +1,12 @@
-This is the repository for my Final Year Project
-database created on phpmyadmin and hosted on AMPPS 3.9 
-all sql can be found in sql.txt 
+This is the repository for my Final Year Project - AutoVisor
+database created on phpmyadmin and hosted using a node.js runtime 
 
-apache server hosted on same ampps instalatation. Connection variables can be changed in the dbcontext class
-css method used is w3 schools css, stylesheets referenced on webpages 
+all sql can be found in sql.txt to configure the database
+
+To set up the application follow the initial setup guide detailed in the report
+All the details for the required Node modules are also avialable in the setup guide
+
+To adjust the connection variables for database and vsphere hosts follow the setup guide or edit the values in the server.js file
+
+css stylesheets used is w3 schools css, stylesheets referenced on webpages 
+All Node modules fall under MIT or Apache 2.0 licence 
