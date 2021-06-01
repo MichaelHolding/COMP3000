@@ -1,14 +1,26 @@
-CREATE TABLE `comp3000`.`users` ( `username` VARCHAR(40) NOT NULL , `password` VARCHAR(40) NOT NULL ) ENGINE = InnoDB;
-ALTER TABLE `users` ADD PRIMARY KEY(`username`);
+CREATE TABLE `vm_template` (
+  `template_name` varchar(40) NOT NULL,
+  `vm_item` varchar(50) NOT NULL,
+  `cpu` int NOT NULL,
+  `storage` int NOT NULL,
+  `ram` int NOT NULL,
+  `os` varchar(40) NOT NULL
+);
 
-CREATE TABLE `comp3000`.`actvie_machines` ( `active_machine_id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(40) NOT NULL ,
- `vm_type_id` INT NOT NULL , PRIMARY KEY (`active_machine_id`)) ENGINE = InnoDB;
+PROCEDURE `AddTemplate`(IN `name` VARCHAR(40), IN `id` VARCHAR(50), IN `inCPU` INT(4), IN `inhdd` INT(6), IN `inram` INT(4), IN `inOS` VARCHAR(30)) 
+BEGIN 
+INSERT INTO vm_template(template_id, template_name,vm_item,cpu,storage,ram,os) 
+VALUES(null,name,id,inCPU,inhdd,inram,inOS); 
+END
 
-ALTER TABLE `actvie_machines` ADD CONSTRAINT `FK_vm_ID` FOREIGN KEY (`vm_type_id`) REFERENCES `vm_type`(`vm_type_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-ALTER TABLE `actvie_machines` ADD CONSTRAINT `FK_username` FOREIGN KEY (`username`) REFERENCES `users`(`username`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+PROCEDURE `UpdateTemplate`(IN `inID` INT, IN `inName` VARCHAR(40), IN `inCPU` INT, IN `inHDD` INT, IN `inRAM` INT, IN `inLib` VARCHAR(50), IN `inOS` VARCHAR(40)) 
+BEGIN 
+UPDATE vm_template 
+SET template_name = inName,vm_item = inlib ,cpu = inCPU, storage = inHDD, ram = inRam, os = inOS WHERE vm_template.template_id = inID; 
+END
 
-CREATE TABLE `comp3000`.`vm_type` ( `vm_type_id` INT NOT NULL AUTO_INCREMENT , `vm_name` VARCHAR(25) NOT NULL , `vm_hdd` INT NOT NULL ,
- `vm_cpus` INT NOT NULL , `vm_ram` INT NOT NULL , PRIMARY KEY (`vm_type_id`)) ENGINE = InnoDB;
+PROCEDURE `RemoveTemplate`(IN `inID` INT)
+BEGIN 
+DELETE FROM vm_template WHERE vm_template.template_id = inID; 
+END
 
-CREATE TABLE `comp3000_mholding`.`vm_template` ( `template_name` VARCHAR(40) NULL , `vm_item` VARCHAR(50) NULL ) ENGINE = InnoDB;
-ALTER TABLE `vm_template` ADD PRIMARY KEY( `template_name`);
